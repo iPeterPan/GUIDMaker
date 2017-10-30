@@ -34,7 +34,10 @@
             this.txtGUIDs = new System.Windows.Forms.TextBox();
             this.nudCount = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkWithHyphen = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudCount)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -51,7 +54,7 @@
             // btnMake
             // 
             this.btnMake.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMake.Location = new System.Drawing.Point(280, 643);
+            this.btnMake.Location = new System.Drawing.Point(410, 31);
             this.btnMake.Name = "btnMake";
             this.btnMake.Size = new System.Drawing.Size(144, 41);
             this.btnMake.TabIndex = 0;
@@ -62,7 +65,7 @@
             // btnCopy
             // 
             this.btnCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCopy.Location = new System.Drawing.Point(430, 643);
+            this.btnCopy.Location = new System.Drawing.Point(560, 31);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.Size = new System.Drawing.Size(144, 41);
             this.btnCopy.TabIndex = 0;
@@ -78,15 +81,15 @@
             this.txtGUIDs.Location = new System.Drawing.Point(12, 15);
             this.txtGUIDs.Multiline = true;
             this.txtGUIDs.Name = "txtGUIDs";
-            this.txtGUIDs.Size = new System.Drawing.Size(712, 614);
+            this.txtGUIDs.Size = new System.Drawing.Size(712, 530);
             this.txtGUIDs.TabIndex = 1;
             // 
             // nudCount
             // 
             this.nudCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudCount.Location = new System.Drawing.Point(101, 651);
+            this.nudCount.Location = new System.Drawing.Point(292, 35);
             this.nudCount.Name = "nudCount";
-            this.nudCount.Size = new System.Drawing.Size(162, 32);
+            this.nudCount.Size = new System.Drawing.Size(101, 32);
             this.nudCount.TabIndex = 2;
             this.nudCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudCount.Value = new decimal(new int[] {
@@ -99,22 +102,47 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 655);
+            this.label1.Location = new System.Drawing.Point(205, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 21);
             this.label1.TabIndex = 3;
             this.label1.Text = "Count :";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.chkWithHyphen);
+            this.groupBox1.Controls.Add(this.btnCopy);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.btnMake);
+            this.groupBox1.Controls.Add(this.nudCount);
+            this.groupBox1.Location = new System.Drawing.Point(14, 551);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(710, 86);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Options";
+            // 
+            // chkWithHyphen
+            // 
+            this.chkWithHyphen.AutoSize = true;
+            this.chkWithHyphen.Checked = true;
+            this.chkWithHyphen.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkWithHyphen.Location = new System.Drawing.Point(9, 39);
+            this.chkWithHyphen.Name = "chkWithHyphen";
+            this.chkWithHyphen.Size = new System.Drawing.Size(170, 25);
+            this.chkWithHyphen.TabIndex = 4;
+            this.chkWithHyphen.Text = "with hyphen \"-\"";
+            this.chkWithHyphen.UseVisualStyleBackColor = true;
             // 
             // frmGUIDMaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 696);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.nudCount);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtGUIDs);
-            this.Controls.Add(this.btnCopy);
-            this.Controls.Add(this.btnMake);
             this.Controls.Add(this.btnClose);
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(760, 760);
@@ -123,6 +151,8 @@
             this.Text = "GUID Maker";
             this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.nudCount)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,6 +166,8 @@
         private System.Windows.Forms.TextBox txtGUIDs;
         private System.Windows.Forms.NumericUpDown nudCount;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox chkWithHyphen;
     }
 }
 

@@ -24,7 +24,14 @@ namespace GUIDMaker
             for (decimal d = 0; d < decCount; d++)
             {
                 object guid = Guid.NewGuid();
-                strBuilder.AppendLine(guid.ToString());
+
+                string strGUID = guid.ToString();
+                if (!chkWithHyphen.Checked)
+                {
+                    strGUID = strGUID.Replace("-", "");
+                }
+
+                strBuilder.AppendLine(strGUID);
 
             }
             txtGUIDs.Text = strBuilder.ToString();
